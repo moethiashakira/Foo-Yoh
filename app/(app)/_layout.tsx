@@ -1,9 +1,11 @@
 import { Redirect, Stack } from 'expo-router';
 import { Text } from 'react-native';
 import { useSession } from '../ctx';
+import { PaperProvider } from 'react-native-paper';
 
 export default function AppLayout() {
   const { session, isLoading } = useSession();
+
 
   // You can keep the splash screen open, or render a loading screen like we do here.
   if (isLoading) {
